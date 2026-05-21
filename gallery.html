@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyStore - Gallery</title>
+    <link rel="stylesheet" href="..//CSS/website1.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛒</text></svg>">
+    <style>
+        .gallery-header { text-align: center; padding: 40px 0; }
+        .folder-section { margin-bottom: 60px; }
+        .folder-title { 
+            font-size: 24px; 
+            margin-bottom: 20px; 
+            padding-bottom: 10px; 
+            border-bottom: 2px solid #222;
+            display: inline-block;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .gallery-item {
+            height: 300px;
+            background: #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+        }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; cursor: pointer; transition: 0.3s; }
+        .gallery-item img:hover { transform: scale(1.05); }
+        .description-box { padding: 10px 0; font-size: 14px; color: #666; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">MyStore</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="website1.html">Shop</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <header class="gallery-header">
+            <h1>Our Collections</h1>
+        </header>
+
+        <section class="folder-section">
+            <h2 class="folder-title">1. Anime</h2>
+            <div class="gallery-grid">
+                 <div class="product-card">
+                <div class="image-container">
+                    <img src="../ASSETS/images/1.jpg" alt="Naruto">
+                    <span class="badge">New</span>
+                </div>
+                <div class="product-info">
+                    <h3>Naruto (Kurama mode)</h3>
+                    <p class="description">Naruto shippuden.</p>
+                    <div class="price-row">
+                        <span class="price">₹2500.00</span>
+                        <button class="add-btn" data-name="Naruto (Kurama mode)" data-price="2500">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="../ASSETS/images/2.jpg" alt="Luffy">
+                    <span class="badge">Buy 1 get 1 free</span>
+                </div>
+                <div class="product-info">
+                    <h3>Monkey D. Luffy</h3>
+                    <p class="description">The Straw Hat Pirates captain. One Piece.</p>
+                    <div class="price-row">
+                        <span class="price">₹3000.00</span>
+                        <button class="add-btn" data-name="Monkey D. Luffy" data-price="3000">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="../ASSETS/images/3.jpg" alt="Madara Uchiha">
+                    <span class="badge sale">50% off</span>
+                </div>
+                <div class="product-info">
+                    <h3>Uchiha Madara</h3>
+                    <p class="description">The strongest Uchiha in the series. Naruto Shippuden.</p>
+                    <div class="price-row">
+                        <span class="price">₹2000.00</span>
+                        <button class="add-btn" data-name="Uchiha Madara" data-price="1000">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="../ASSETS/images/4.jpg" alt="Car">
+                    <span class="badge">Poster</span>
+                </div>
+                <div class="product-info">
+                    <h3>BMW M4</h3>
+                    <p class="description">BMW M4 Glossy black.</p>
+                    <div class="price-row">
+                        <span class="price">₹2800.00</span>
+                        <button class="add-btn" data-name="BMW M4" data-price="2800">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="../ASSETS/images/5.jpg" alt="Madara Uchiha">
+                    <span class="badge">Limited Edition</span>
+                </div>
+                <div class="product-info">
+                    <h3>Uchiha Madara</h3>
+                    <p class="description">Ghost of the Uchiha. Naruto Shippuden.</p>
+                    <div class="price-row">
+                        <span class="price">₹3500.00</span>
+                        <button class="add-btn" data-name="Uchiha Madara (Ghost)" data-price="3500">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="../ASSETS/images/6.jpg" alt="Girl">
+                    <span class="badge">Few left</span>
+                </div>
+                <div class="product-info">
+                    <h3>Angel girl</h3>
+                    <p class="description">A beautiful angel girl photo.</p>
+                    <div class="price-row">
+                        <span class="price">₹4000.00</span>
+                        <button class="add-btn" data-name="Angel Girl" data-price="4000">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="../ASSETS/images/7.jpg" alt="Boy">
+                    <span class="badge">Few left</span>
+                </div>
+                <div class="product-info">
+                    <h3>Baki</h3>
+                    <p class="description">Baki Hanma.</p>
+                    <div class="price-row">
+                        <span class="price">₹5000.00</span>
+                        <button class="add-btn" data-name="Baki Hanma" data-price="5000">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="../ASSETS/images/8.jpg" alt="Boy">
+                    <span class="badge">Few left</span>
+                </div>
+                <div class="product-info">
+                    <h3>Mini Luffy</h3>
+                    <p class="description">A cute kid version of Luffy.</p>
+                    <div class="price-row">
+                        <span class="price">₹2200.00</span>
+                        <button class="add-btn" data-name="Mini Luffy" data-price="2200">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="../ASSETS/images/9.jpg" alt="Boys">
+                    <span class="badge">Few left</span>
+                </div>
+                <div class="product-info">
+                    <h3>Three Brothers</h3>
+                    <p class="description">Three brothers in a photo from One piece Anime.</p>
+                    <div class="price-row">
+                        <span class="price">₹5450.00</span>
+                        <button class="add-btn" data-name="Three Brothers" data-price="5450">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="../ASSETS/images/10.jpg" alt="boy">
+                    <span class="badge">Few left</span>
+                </div>
+                <div class="product-info">
+                    <h3>Zenin Toji</h3>
+                    <p class="description">A photo of Zenin Toji from Jujutsu Kaisen.</p>
+                    <div class="price-row">
+                        <span class="price">₹9999.00</span>
+                        <button class="add-btn" data-name="Zenin Toji" data-price="9999">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class = "product-card">
+                <div class="image-container">
+                    <img src="../ASSETS/images/11.jpg" alt="boy">
+                    <span class="badge">10% Off</span>
+                </div>
+                <div class="product-info">
+                    <h3>Zenin Toji</h3>
+                    <p class="description">Toji photo with Manga style Background.</p>
+                    <div class="price-row">
+                        <span class="price">₹15000.00</span>
+                        <button class="add-btn" data-name="Zenin Toji" data-price="13500">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="../ASSETS/images/12.jpg" alt="boy">
+                    <span class="badge">10% Off</span>
+                    </div>
+                <div class="product-info">
+                    <h3>Ryomen Sukuna </h3>
+                    <p class="description">Sukuna pose with manga style background.</p>
+                    <div class="price-row">
+                        <span class="price">₹12000.00</span>
+                        <button class="add-btn" data-name="Ryomen Sukuna" data-price="10800">Add to Cart</button>
+                        </div>
+                        </div>
+                        </div>
+                           <div class = "product-card">
+                <div class="image-container">
+                    <img src="../ASSETS/images/13.jpg" alt="boy">
+                    <span class="badge">Limited Stock</span>
+                </div>
+                <div class="product-info">
+                    <h3> Gol D. Ace</h3>
+                    <p class="description"> Ace Son of Gol D. Roger. Known as  Portgas D. Ace </p>
+                    <div class="price-row">
+                        <span class="price">₹13999.00</span>
+                        <button class="add-btn" data-name="Gol D. Ace" data-price="13999">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+                <div class="product-card">
+                    <div class="image-container">
+                        <img src="../ASSETS/images/14.jpg" alt="Boys">
+                        <span class="badge">10% Off</span>
+                        </div>
+                    <div class="product-info">
+                        <h3>The MOnster Trio</h3>
+                        <p class="description">Monster Trio of One Piece.</p>
+                        <div class="price-row">
+                            <span class="price">₹1M.00</span>
+                            <button class="add-btn" data-name="Straw Hat Crew" data-price="900000">Add to Cart</button>
+                        </div>
+                        </div>
+                        </div>
+                                     <div class = "product-card">
+                <div class="image-container">
+                    <img src="../ASSETS/images/15.jpg" alt="boy">
+                    <span class="badge">Limited Stock</span>
+                </div>
+                <div class="product-info">
+                    <h3> Roronoa Zoro</h3>
+                    <p class="description"> Zoro is a swordsman and member of the Straw Hat Pirates. Also known as "Pirate Hunter" </p>
+                    <div class="price-row">
+                        <span class="price">₹20000.00</span>
+                        <button class="add-btn" data-name="Roronoa Zoro" data-price="20000">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+                       <div class = "product-card">
+                <div class="image-container">
+                    <img src="../ASSETS/images/16.jpg" alt="boy">
+                    <span class="badge">Few left</span>
+                </div>
+                <div class="product-info">
+                    <h3> Monkey D. Luffy</h3>
+                    <p class="description"> Luffy is the main protagonist of the One Piece series. Also known as " Straw Hat" </p>
+                    <div class="price-row">
+                        <span class="price">₹25000.00</span>
+                        <button class="add-btn" data-name="Monkey D. Luffy" data-price="25000">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+                                   <div class = "product-card">
+                <div class="image-container">
+                    <img src="../ASSETS/images/17.jpg" alt="boy">
+                    <span class="badge">Out of Stock</span>
+                </div>
+                <div class="product-info">
+                    <h3> Sung Jinwoo</h3>
+                    <p class="description"> Jinwoo is the main character of the webtoon "Solo Leveling".  </p>
+                    <div class="price-row">
+                        <span class="price">₹10000.00</span>
+                        <button class="add-btn" data-name="Sung Jinwoo" data-price="10000">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+                                  <div class = "product-card">
+                <div class="image-container">
+                    <img src="../ASSETS/images/18.jpg" alt="boy">
+                    <span class="badge">Out of Stock</span>
+                </div>
+                <div class="product-info">
+                    <h3> Light Yagami (Kira)</h3>
+                    <p class="description"> Yagami is the main character of the manga "Death Note".  </p>
+                    <div class="price-row">
+                        <span class="price">₹10000.00</span>
+                        <button class="add-btn" data-name="Light Yagami (Kira)" data-price="10000">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+                                 <div class = "product-card">
+                <div class="image-container">
+                    <img src="../ASSETS/images/19.jpg" alt="boy">
+                    <span class="badge">Out of Stock</span>
+                </div>
+                <div class="product-info">
+                    <h3> Eren Yeager</h3>
+                    <p class="description"> Eren Yeager is the protagonist-turned-antagonist of the Attack on Titan series.  </p>
+                    <div class="price-row">
+                        <span class="price">₹5000.00</span>
+                        <button class="add-btn" data-name="Eren Yeager" data-price="10000">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            </div>
+            <div class="description-box">here type what you want about Boy</div>
+        </section>
+
+        <section class="folder-section">
+            <h2 class="folder-title">2. Bikes</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="..//ASSETS/images/3.jpg" alt="Bikes"></div>
+                <div class="gallery-item"><img src="..//ASSETS/images/4.jpg" alt="Bikes"></div>
+                <div class="gallery-item"><img src="..//ASSETS/images/3.jpg" alt="Bikes"></div>
+                <div class="gallery-item"><img src="..//ASSETS/images/4.jpg" alt="Bikes"></div>
+                <div class="gallery-item"><img src="..//ASSETS/images/3.jpg" alt="Bikes"></div>
+                <div class="gallery-item"><img src="..//ASSETS/images/4.jpg" alt="Bikes"></div>
+            </div>
+            <div class="description-box">here type what you want about Bikes</div>
+        </section>
+
+        <section class="folder-section">
+            <h2 class="folder-title">3. Super heros</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="..//ASSETS/images/5.jpg" alt="Hero"></div>
+                <div class="gallery-item"><img src="..//ASSETS/images/6.jpg" alt="Hero"></div>
+                 <div class="gallery-item"><img src="..//ASSETS/images/6.jpg" alt="Hero"></div>
+                  <div class="gallery-item"><img src="..//ASSETS/images/6.jpg" alt="Hero"></div>
+                   <div class="gallery-item"><img src="..//ASSETS/images/6.jpg" alt="Hero"></div>
+                    <div class="gallery-item"><img src="..//ASSETS/images/6.jpg" alt="Hero"></div>
+            </div>
+            <div class="description-box">here type what you want about Hero</div>
+        </section>
+
+        <section class="folder-section">
+            <h2 class="folder-title">4. Cars</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="..//ASSETS/images/7.jpg" alt="Cars"></div>
+                <div class="gallery-item"><img src="..//ASSETS/images/8.jpg" alt="Cars"></div>
+                <div class="gallery-item"><img src="..//ASSETS/images/8.jpg" alt="Cars"></div>
+                <div class="gallery-item"><img src="..//ASSETS/images/7.jpg" alt="Cars"></div>
+                <div class="gallery-item"><img src="..//ASSETS/images/8.jpg" alt="Cars"></div>
+                <div class="gallery-item"><img src="..//ASSETS/images/7.jpg" alt="Cars"></div>
+            </div>
+            <div class="description-box">here type what you want about Cars</div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; My Photo Store.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
